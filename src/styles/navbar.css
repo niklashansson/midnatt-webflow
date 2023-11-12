@@ -1,0 +1,26 @@
+.w-nav:has([data-nav-menu-open]) {
+  background-color: var(--bg1);
+}
+
+.w-nav-menu {
+  background-color: var(--bg1);
+  max-width: var(--mw1);
+  padding-left: var(--pp1);
+  padding-right: var(--pp1);
+  padding-top: var(--pp1);
+  padding-bottom: var(--pp1);
+  transform: none;
+  overflow-y: auto;
+}
+
+.w-nav-button.w--open {
+  color: inherit;
+  background-color: inherit;
+}
+
+.w-nav-link {
+  padding: 0;
+  vertical-align: inherit;
+  /* color: inherit; */
+  margin: inherit;
+}
