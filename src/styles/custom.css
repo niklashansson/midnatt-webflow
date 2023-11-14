@@ -80,11 +80,26 @@ body {
   margin-top: 0.5rem;
 }
 
-[class*='lsp1']:last-child {
-  margin-bottom: 0rem;
-  margin-right: 0rem !important;
-}
-
 :is(section, footer)[border-section='true'] {
   border-top: 1px solid var(--bc1);
+}
+
+/* swiper styles */
+.homewebflow2_tabs_link {
+  cursor: pointer;
+}
+
+.homewebflow2_tab_content {
+  transition-duration: 500ms;
+  transition-property: all;
+}
+
+.homewebflow2_tabs_link .homewebflow2_tab_content {
+  max-height: 0;
+  overflow-y: hidden;
+}
+
+.homewebflow2_tabs_link.homewebflow2_tabs_link-active .homewebflow2_tab_content {
+  max-height: none;
+  overflow-y: hidden;
 }

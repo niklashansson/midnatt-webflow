@@ -39,7 +39,7 @@ html {
   --br3: 100vw;
   /* border width */
   --bw1: 1px;
-  --bw2: 0.5px;
+  --bw2: 1.5px;
   /* default grid gap */
   --default-grid-gap: 3rem;
   --default-row-gap: var(--default-grid-gap);
@@ -293,4 +293,10 @@ footer {
   padding-top: var(--project-layout-padding);
   padding-left: var(--project-layout-padding);
   padding-right: var(--project-layout-padding);
+}
+
+/* remove last items margin */
+[class*='lsp1']:last-child {
+  margin-bottom: 0rem;
+  margin-right: 0rem !important;
 }
