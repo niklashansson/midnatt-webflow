@@ -1,1 +1,1 @@
-"use strict";(()=>{})();
+"use strict";(()=>{function o(e,t){return Array.from((t||document).querySelectorAll(e))}function n(e){e.style.height=`${window.innerHeight}px`}var r;(r=window.Webflow)==null||r.push(()=>{let e=o("[full-height-element]");e&&e.forEach(t=>{n(t),window.addEventListener("resize",()=>{n(t)})})});})();

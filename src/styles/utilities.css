@@ -16,6 +16,8 @@
 
 /* variables */
 html {
+  --vt0-5: var(--size1-5);
+  --vb0-5: var(--size1-5);
   /* small section padding */
   --vt1: var(--size4);
   --vb1: var(--size4);
@@ -55,23 +57,23 @@ html {
     /* page padding */
     --pp1: 3rem;
     /* spacing scale */
-    --spacing-scale: 0.75;
+    --spacing-scale: 0.875;
   }
 }
 /* landscape */
 @media screen and (max-width: 767px) {
   html {
     /* page padding */
-    --pp1: 1.5rem;
+    --pp1: 1.75rem;
     /* spacing scale */
-    --spacing-scale: 0.5;
+    --spacing-scale: 0.75;
   }
 }
 /* portrait */
 @media screen and (max-width: 479px) {
   html {
     /* page padding */
-    --pp1: 1.5rem;
+    --pp1: 1.75rem;
   }
 }
 
@@ -276,23 +278,6 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-}
-
-/* project layout padding */
-:is([project-layout='1']) img {
-  padding-top: var(--project-layout-padding);
-  padding-left: var(--project-layout-padding);
-}
-
-:is([project-layout='2']) img {
-  padding-top: var(--project-layout-padding);
-  padding-right: var(--project-layout-padding);
-}
-
-:is([project-layout='3']) img {
-  padding-top: var(--project-layout-padding);
-  padding-left: var(--project-layout-padding);
-  padding-right: var(--project-layout-padding);
 }
 
 /* remove last items margin */
