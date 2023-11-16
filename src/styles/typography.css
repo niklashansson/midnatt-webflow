@@ -174,7 +174,7 @@ h6,
 
 /* navbar font styles */
 [class*='w-nav-link'] {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: var(--fw1);
   line-height: var(--lh2);
 }
@@ -256,6 +256,10 @@ h6,
   }
   [class*='fs7-2'] {
     /* font-size: 0rem; */
+  }
+  [class*='w-nav-link'] {
+    font-size: 3rem;
+    line-height: var(--lh0);
   }
 }
 @media screen and (max-width: 479px) {

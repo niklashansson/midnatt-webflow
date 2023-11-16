@@ -50,6 +50,24 @@ body {
   }
 }
 
+/* link styles */
+.link[link-icon='1'],
+.link[link-icon='2'] {
+  padding-right: 1.125em;
+}
+
+.link[link-icon='1'] [link-icon='1'] {
+  display: block;
+}
+
+.link[link-icon='2'] [link-icon='2'] {
+  display: block;
+}
+
+.link [link-icon] {
+  display: none;
+}
+
 /* form styles */
 /* field placeholder */
 .w-input::placeholder,
@@ -102,4 +120,18 @@ body {
 .homewebflow2_tabs_link.homewebflow2_tabs_link-active .homewebflow2_tab_content {
   max-height: none;
   overflow-y: hidden;
+}
+
+.projecthead1_logotype--vb1 .w-embed {
+  width: 3rem;
+}
+
+.w-script:before,
+.w-script:after {
+  content: none;
+  display: none;
+}
+
+.w-script {
+  background-color: none;
 }

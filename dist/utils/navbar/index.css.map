@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/styles/navbar.css"],
+  "sourcesContent": ["/* .w-nav:has([data-nav-menu-open]) {\n  background-color: var(--bg1);\n} */\n\n.w-nav {\n  background-color: rgba(255, 255, 255, 0);\n}\n\n.w-nav-menu {\n  background-color: var(--bg1);\n  max-width: var(--mw1);\n  transform: none;\n  padding-left: var(--pp1);\n  padding-right: var(--pp1);\n  overflow-y: auto;\n}\n\n.w-nav-button.w--open {\n  color: inherit;\n  background-color: inherit;\n}\n\n.w-nav-link {\n  padding: 0;\n  vertical-align: inherit;\n  margin: inherit;\n}\n\n/* [nav-mode='min'] {\n  padding-top: 0.75rem;\n  padding-bottom: 0.75rem;\n  transition-property: padding;\n  transition-duration: 200;\n  background-color: var(--bg1);\n}\n\n[nav-mode='min'] .w-nav-brand {\n  max-width: 5rem;\n}\n\n[nav-mode='min'] .w-nav-button {\n  font-size: 1.25rem;\n}\n\n.w-nav:has([data-nav-menu-open]) .w-nav-brand {\n  max-width: none;\n}\n\n.w-nav:has([data-nav-menu-open])[nav-mode='min'] {\n  padding-top: 4rem;\n  padding-bottom: 1.75rem;\n} */\n"],
+  "mappings": ";AAIA;AACE;AAAA;AAGF;AACE;AACA;AACA;AACA;AACA;AACA;AAAA;AAGF;AACE;AACA;AAAA;AAGF;AACE;AACA;AACA;AAAA;",
+  "names": []
+}
