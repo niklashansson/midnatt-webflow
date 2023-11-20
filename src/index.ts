@@ -1,3 +1,4 @@
+import { queryElement } from '$utils/queryElement';
 import { queryElements } from '$utils/queryElements';
 import { setElementToWindowHeight } from '$utils/setElementToWindowHeight';
 

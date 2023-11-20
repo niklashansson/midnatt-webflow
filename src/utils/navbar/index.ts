@@ -3,17 +3,18 @@ import '../../styles/navbar.css';
 import { queryElement } from '@finsweet/ts-utils';
 import { gsap } from 'gsap';
 
-import { queryElements } from '$utils/queryElements';
-
-import { setNavMenuToWindowHeight } from './setMenuHeight';
-
 window.Webflow?.push(() => {
   //  webflow elements
   const elements = ['', '-menu', '-button', '-brand'].map((elClass) => {
     return queryElement(`.w-nav${elClass}`, HTMLElement);
   });
+
   const [nav, menu, btn, brand] = elements;
-  if (!nav || !menu || !btn || !brand) return;
+  const body = queryElement('body', HTMLBodyElement);
+  if (!nav || !menu || !btn || !brand || !body) return;
+
+  const colorMode = body.getAttribute('section-mode');
+  const bg = colorMode === '2' ? '#1c1c1c' : 'white';
 
   // states
   let isMinimized = false;
@@ -51,21 +52,18 @@ window.Webflow?.push(() => {
 
   new IntersectionObserver(
     ([IntersectionObserver]) => {
-      const {
-        isIntersecting,
-        intersectionRect: { height },
-      } = IntersectionObserver;
+      const { isIntersecting } = IntersectionObserver;
 
       !isIntersecting ? (isMinimized = true) : (isMinimized = false);
 
-      isMinimized && minimizeNavbar();
+      isMinimized && minimizeNavbar(false, bg);
 
-      !isMinimized && minimizeNavbar(true, 'transparent');
+      !isMinimized && minimizeNavbar(true, `${bg}00`);
     },
     { threshold: 0.5 }
   ).observe(heroSection);
 
-  function minimizeNavbar(reverse = false, backgroundColor = 'white') {
+  function minimizeNavbar(reverse = false, backgroundColor = bg) {
     if (!brand || !nav || !btn) return;
     const tl = gsap.timeline();
 
@@ -107,7 +105,7 @@ window.Webflow?.push(() => {
     setTimeout(() => {
       setFullMenuHeight();
     }, 500);
-    tl.to(nav, { backgroundColor: 'white', duration: 0 });
+    tl.to(nav, { backgroundColor: bg, duration: 0 });
   }
 
   function closeNavbar() {
@@ -119,7 +117,7 @@ window.Webflow?.push(() => {
     }
 
     if (!isMinimized) {
-      tl.to(nav, { backgroundColor: 'transparent', duration: 0 }, '<');
+      tl.to(nav, { backgroundColor: `${bg}00`, duration: 0 }, '<');
     }
 
     setFullMenuHeight();
