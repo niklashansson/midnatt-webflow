@@ -16,8 +16,6 @@
 
 /* variables */
 html {
-  --vt0-5: var(--size1-5);
-  --vb0-5: var(--size1-5);
   /* small section padding */
   --vt1: var(--size4);
   --vb1: var(--size4);

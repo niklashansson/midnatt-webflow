@@ -5,6 +5,25 @@ body {
   overscroll-behavior: none;
 }
 
+/* first section compensation for fixed navbar */
+.w-nav + [add-nav-compensation]::before {
+  content: '';
+  display: block;
+  padding-top: 4.25rem;
+}
+
+@media screen and (max-width: 991px) {
+  .w-nav + [add-nav-compensation]::before {
+    padding-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-nav + [add-nav-compensation]::before {
+    padding-top: 2rem;
+  }
+}
+
 /* prevent horizontal scroll */
 .page_wrap {
   overflow: clip;
@@ -98,8 +117,16 @@ body {
   margin-top: 0.5rem;
 }
 
-:is(section, footer)[border-section='true'] {
-  border-top: 1px solid var(--bc1);
+/* default section border */
+:is(section, footer, header)[border-section='true']::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--pp1);
+  right: var(--pp1);
+  height: var(--bw1);
+  background-color: var(--bc1);
 }
 
 /* swiper styles */

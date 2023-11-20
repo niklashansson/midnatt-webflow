@@ -57,6 +57,11 @@ body {
   text-transform: var(--tt1);
 }
 
+/* bold font */
+strong {
+  font-weight: var(--fw2);
+}
+
 /* heading font styles */
 [class*='fs0'],
 h1,
@@ -328,6 +333,12 @@ html {
   --tt2: uppercase;
   --tt3: capitalize;
   --tt4: lowercase;
+  /* rich text spacing */
+  --rts1: 2.75rem;
+  --rts2: 2rem;
+  --rts3: 1.5rem;
+  --rts3: 1rem;
+  --rts4: 0.5rem;
 }
 
 /* utilities */
@@ -415,4 +426,80 @@ html {
 /* text wrap */
 [class*='tw1'] {
   text-wrap: balance;
+}
+
+/* rich text styles */
+.w-richtext h1,
+h2 {
+  font-size: 1.875rem;
+  margin: var(--rts3) 0;
+}
+
+.w-richtext h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--rts2);
+}
+
+.w-richtext h4 {
+  font-size: 1.125rem;
+  line-height: var(--lh2);
+  font-weight: var(--fw2);
+  margin-bottom: var(--rts5);
+}
+
+.w-richtext h5 {
+  font-size: 1.125rem;
+  font-weight: var(--fw3);
+  line-height: var(--lh2);
+}
+
+.w-richtext h6 {
+  font-size: 1rem;
+  font-weight: var(--fw3);
+  margin-bottom: var(--rts5);
+}
+
+.w-richtext p {
+  margin-bottom: var(--rts3);
+}
+
+.w-richtext :is(p, ul, li, blockquote) + :is(h1, h2) {
+  margin-top: var(--rts1);
+}
+
+.w-richtext :is(p, ul, ol, blockquote) + :is(h3) {
+  margin-top: var(--rts1);
+}
+
+.w-richtext :is(p, ul, ol, blockquote) + :is(h4) {
+  margin-top: var(--rts3);
+}
+
+.w-richtext :is(p, ul, ol, blockquote) + :is(h5, h6) {
+  margin-top: var(--rts4);
+}
+
+.w-richtext h2 + h3 {
+  margin-top: var(--rts2);
+}
+
+.w-richtext a {
+  position: relative;
+}
+
+.w-richtext a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.0875em;
+  background-color: var(--fc1);
+  opacity: 0.25;
+}
+
+.w-richtext blockquote {
+  font-size: 1.25rem;
+  border-left-width: 0.25em;
 }

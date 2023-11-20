@@ -88,7 +88,7 @@ body, [section-mode="1"], [class*="sm0-1"],
   /* section mode 2 */
   --m-bg1: rgba(var(--dark-1), 2);
   --m-fc1: rgba(var(--light-2), 1);
-  --m-fc2: rgba(var(--light-2), 0.7);
+  --m-fc2: rgba(var(--light-2), 0.85);
   --m-bc1: rgba(var(--light-2), 0.075);
   --m-sc1: rgba(var(--brand-1), 1);
   /* navbar */
@@ -108,12 +108,12 @@ body, [section-mode="1"], [class*="sm0-1"],
   --bm1-bg1b-hover: rgba(var(--light-2), 0.125);
   --bm1-fc1-hover: rgba(var(--light-1), 1);
   /* btn mode 2 (secondary) */
-  --bm2-bg1: rgba(var(--light-2), 1);
-  --bm2-bg1b: rgba(var(--light-2), 1);
-  --bm2-fc1: rgba(var(--dark-2), 1);
-  --bm2-bg1-hover: rgba(var(--dark-1), 1);
-  --bm2-bg1b-hover: rgba(var(--dark-1), 1);
-  --bm2-fc1-hover: rgba(var(--light-2), 1);
+  --bm2-bg1: rgba(var(--dark-2), 1);
+  --bm2-bg1b: rgba(var(--dark-2), 1);
+  --bm2-fc1: rgba(var(--light-1), 1);
+  --bm2-bg1-hover: rgba(var(--light-1), 1);
+  --bm2-bg1b-hover: rgba(var(--light-1), 1);
+  --bm2-fc1-hover: rgba(var(--dark-1), 1);
   /* link mode 1 (nav link) */
   --lm1-fc1: rgba(var(--light-1), 1);
   --lm1-fc1-hover: rgba(var(--light-1), 0.6);
@@ -187,7 +187,8 @@ body, [section-mode="1"], [class*="sm0-1"],
 
 /**%{{link mode: nav}**/
 [link-mode='1'],
-[class*='lm0-1'] {
+[class*='lm0-1'],
+a {
   --m-fc1: var(--lm1-fc1);
   --m-fc1-hover: var(--lm1-fc1-hover);
   --m-bg1b-active: var(--lm1-bg1b-active);
